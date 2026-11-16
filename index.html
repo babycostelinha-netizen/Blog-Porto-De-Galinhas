@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A travel blog about an unforgettable family trip to Porto de Galinhas, Pernambuco, Brazil.">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>Porto de Galinhas — A Little Piece of Paradise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#173b3a;--muted:#607775;--teal:#087e83;--aqua:#dff3ee;--sand:#f7f5ef;--coral:#e98970}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--sand);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+    .page{max-width:1120px;margin:auto;padding:28px 34px 48px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:4px 0 22px;border-bottom:1px solid #dce5df}
+    .brand{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .edition{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+    .hero{position:relative;min-height:490px;margin-top:28px;overflow:hidden;border-radius:7px;background:#9acfc8}
+    .hero img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,43,44,.76),rgba(7,43,44,.18) 75%),linear-gradient(0deg,rgba(7,43,44,.25),transparent 50%)}
+    .hero-copy{position:absolute;z-index:1;left:7%;bottom:12%;max-width:650px;color:white}
+    .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(43px,7vw,82px);line-height:1.02;letter-spacing:-.035em;margin:18px 0}
+    .hero-copy p{font-size:15px;letter-spacing:.04em;margin:0;color:#e9f7f3}
+    .intro{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:27px 2px 32px;border-bottom:1px solid #dce5df}
+    .intro p{max-width:650px;margin:0;color:var(--muted);font-size:14px}
+    .location{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);font-weight:700;white-space:nowrap}
+    .content{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;padding:42px 0}
+    .section-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:12px}
+    h2{font:600 33px/1.15 "Playfair Display",serif;letter-spacing:-.02em;margin-bottom:18px}
+    .story p{font-size:14px;color:#496360;line-height:1.95;margin-bottom:12px}
+    .feature{position:relative;min-height:310px;border-radius:5px;overflow:hidden}
+    .feature img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+    .feature-caption{position:absolute;bottom:0;left:0;right:0;padding:35px 20px 17px;color:#fff;background:linear-gradient(transparent,rgba(5,38,39,.75));font-size:12px;letter-spacing:.04em}
+    .favorite{background:var(--aqua);padding:25px 27px;margin-top:20px;border-left:3px solid var(--teal)}
+    .favorite h3{font:600 23px "Playfair Display",serif;margin:0 0 8px}
+    .favorite p{font-size:13px;color:#45615d;margin:0}
+    .gallery{padding:5px 0 38px}
+    .gallery-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:17px}
+    .gallery-head h2{margin:0}
+    .gallery-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;height:250px}
+    .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+    .tips{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:25px 0 34px;border-top:1px solid #dce5df}
+    .tip{padding:21px;background:#fff;border-radius:4px}
+    .tip-number{font:600 27px "Playfair Display",serif;color:var(--coral)}
+    .tip h3{font-size:14px;margin:8px 0 4px}
+    .tip p{font-size:12px;color:var(--muted);margin:0}
+    footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #dce5df;padding-top:18px;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    @media(max-width:700px){.page{padding:18px 17px 32px}.hero{min-height:430px}.intro{display:block}.location{margin-top:15px}.content{grid-template-columns:1fr;gap:24px;padding:32px 0}.feature{min-height:260px}.gallery-grid{height:190px}.edition{font-size:9px}.tips{gap:10px}.tip{padding:15px}footer{font-size:9px}}
+    @media print{@page{size:A4;margin:10mm}body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}.page{max-width:none;padding:0}.topbar{padding-bottom:10px}.hero{margin-top:12px;min-height:330px}.hero-copy{bottom:9%}h1{font-size:54px}.intro{padding:15px 2px}.content{padding:22px 0;gap:25px}.story p{font-size:11px;line-height:1.65}.feature{min-height:225px}.favorite{padding:16px;margin-top:12px}.gallery{padding-bottom:22px}.gallery-grid{height:165px}.tips{padding:16px 0 20px}.tip{padding:13px}footer{padding-top:10px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">The Travel Journal</div>
+      <div class="edition">Brazil · Travel Stories · No. 01</div>
+    </header>
+
+    <section class="hero" aria-label="Porto de Galinhas beach">
+      <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=90" alt="Turquoise ocean waves and a tropical beach">
+      <div class="hero-copy">
+        <div class="eyebrow">Pernambuco · Northeast Brazil</div>
+        <h1>Porto de<br>Galinhas</h1>
+        <p>A little piece of paradise by the sea.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <p>Sunshine, warm ocean water and unforgettable moments. Come along and discover a special family trip to one of Brazil’s most beautiful beach destinations.</p>
+      <div class="location">08°30′ S · 35°00′ W</div>
+    </section>
+
+    <section class="content">
+      <article class="story">
+        <div class="section-label">01 / My Travel Experience</div>
+        <h2>A trip to remember</h2>
+        <p>Last year, I traveled to Porto de Galinhas with my family. We visited the beautiful beaches and natural pools. We took a boat ride on a colorful jangada. I saw many colorful fish and enjoyed the amazing ocean. We also ate delicious seafood at a local restaurant. It was an unforgettable trip!</p>
+        <div class="favorite">
+          <div class="section-label">02 / My Favorite Place</div>
+          <h3>The natural pools</h3>
+          <p>My favorite place was the natural pools because the water was crystal clear and beautiful.</p>
+        </div>
+      </article>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85" alt="Beautiful tropical beach with clear blue water">
+        <div class="feature-caption">A beautiful day beside the ocean</div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-head">
+        <div><div class="section-label">Postcard moments</div><h2>Ocean memories</h2></div>
+        <div class="location">Pernambuco, Brazil</div>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1100&q=85" alt="Tropical beach with palm trees">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=85" alt="Clear tropical sea and coastal scenery">
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">03 / Travel Tips</div>
+      <h2>Before you go</h2>
+      <div class="tips">
+        <article class="tip"><div class="tip-number">01</div><h3>Visit the natural pools!</h3><p>Enjoy the clear water and discover the colorful fish.</p></article>
+        <article class="tip"><div class="tip-number">02</div><h3>Take a jangada ride!</h3><p>See the coast from the water and enjoy the view.</p></article>
+      </div>
+    </section>
+
+    <footer><span>Made with sunshine & good memories</span><span>Porto de Galinhas · Brazil</span></footer>
+  </main>
+</body>
+</html>
